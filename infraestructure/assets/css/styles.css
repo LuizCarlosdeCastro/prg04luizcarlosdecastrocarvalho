@@ -1,35 +1,56 @@
-body{
+:root{
+    --cor-primaria: #a34123;
+    --cor-analoga1: #cb8404;
+    --cor-analoga2: #c47604;
+    --cor-complementar: #5377a3;
+    --cor-fundo:  #c0a397;
 
-    background-color: rgb(255, 255, 255);
-    font-family: sans-serif;
 }
 
+
+
+.resposive-banner{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body{
+    background-color: var(--cor-fundo);
+    font-family: Arial;
+    color:#000000
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-primaria);
+}
+
+.logo-container{
+    width: 100px;
+    height: auto;
+    margin-left: 15px;
+}
+
+nav{
+    height: 1000;
+}
 p{
-    color:rgb(0, 0, 0);
     text-align: center;
 }
 
 
 h1{
-    color:rgb(182, 80, 13);
     text-align: center;
 }
 
 h2{
-    color:#cfb53b;
     text-align: center;
 
 }
 
-/*.color1 { #cb8404 };
-.color2 { #f49c38 };
-.color3 { #c47604 };
-.color4 { #5377a3 };
-.color5 { #c0a397 };
-cores para utilizar depois*/
-
 li{
-    color:rgb(61, 155, 108);
     text-align: center;
 
 }
