@@ -3,41 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Listagem</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/styles.css">
-</head>
-<body>
-    <div class="tabelalogin-layout">
-         <h1>Lista de Usuários</h1>
 
-    <div class="search-container">
-        <input type="text" id="BuscaUsuario" placeholder="Pesquisar por nome ou e-mail..." 
-               class="input-search">
-        
-        <div class="container-botao-cadastro">
-            <a href="../pages/cadastro.html">
-                <button id="btnCadastro" title="Cadastrar nova pessoa">
-                    <img src="../assets/images/add.ico" alt="Cadastrar" class="icone-btn">
-                </button>
-            </a>
+</head>
+<body style="background-color: var(--cor-fundo);">
+
+    <div class="container my-5">
+        <div class="card shadow p-4 border-0">
+            
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h1 class="h3 mb-0">Lista de Usuários</h1>
+                <a href="../pages/cadastro.html" class="btn btn-success d-flex align-items-center gap-2" style="background-color: var(--cor-primaria); border: none;">
+                    <img src="../assets/images/add.ico" alt="" width="20">
+                    Novo Usuário
+                </a>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white">🔍</span>
+                        <input type="text" id="BuscaUsuario" class="form-control" placeholder="Pesquisar por nome ou e-mail...">
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table user-table align-middle">
+                    <thead class="var(--cor-primaria)" style="background-color: var(--cor-primaria) !important;">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Status</th>
+                            <th class="text-center">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Luiz Carlos</td>
+                            <td>luiz@ifba.edu.br</td>
+                            <td><span class="badge rounded-pill bg-success">Ativo</span></td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-warning">Editar</button>
+                                <button class="btn btn-sm btn-danger">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jonatas Ferreira</td>
+                            <td>jonatas@ifba.com</td>
+                            <td><span class="badge rounded-pill bg-success">Ativo</span></td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-warning">Editar</button>
+                                <button class="btn btn-sm btn-danger">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Jose Gata</td>
+                            <td>jose@outlook.com</td>
+                            <td><span class="badge rounded-pill bg-secondary">Inativo</span></td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-warning">Editar</button>
+                                <button class="btn btn-sm btn-danger">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Maria Silva</td>
+                            <td>maria@gmail.com</td>
+                            <td><span class="badge rounded-pill bg-success">Ativo</span></td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-warning">Editar</button>
+                                <button class="btn btn-sm btn-danger">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Lara Bastos</td>
+                            <td>lara@hotmail.com</td>
+                            <td><span class="badge rounded-pill bg-danger">Pendente</span></td>
+                            <td class="text-center">
+                                <button class="btn btn-sm btn-warning">Editar</button>
+                                <button class="btn btn-sm btn-danger">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mt-3">
+                <a href="../pages/index.html" class="text-decoration-none text-muted small">← Voltar para Pagina inicial</a>
+            </div>
         </div>
     </div>
-        <table class="user-table">
-            <thead>
-                <tr><th>ID</th><th>Nome</th><th>E-mail</th><th>Ações</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>1</td><td>Luiz Carlos</td><td>luiz@ifba.edu.br</td><td><button class="btn-edit">Editar</button><button class="btn-delete">Excluir</button></td></tr>
-                <tr><td>2</td><td>Jonatas Ferreira</td><td>jonatas@ifba.com</td><td><button class="btn-edit">Editar</button><button class="btn-delete">Excluir</button></td></tr>
-                <tr><td>3</td><td>Jose Gata</td><td>jose@outlook.com</td><td><button class="btn-edit">Editar</button><button class="btn-delete">Excluir</button></td></tr>
-                <tr><td>4</td><td>Maria Silva</td><td>maria@gmail.com</td><td><button class="btn-edit">Editar</button><button class="btn-delete">Excluir</button></td></tr>
-                <tr><td>5</td><td>Lara Bastos</td><td>lara@hotmail.com</td><td><button class="btn-edit">Editar</button><button class="btn-delete">Excluir</button></td></tr>
-            </tbody>
-        </table>
 
-    </div>
-    <script>
-
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
